@@ -1,7 +1,6 @@
 package models;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 
 public class Task {
     private String description;
@@ -9,7 +8,7 @@ public class Task {
     private LocalDateTime createdAt;
     private int id;
 
-    public Task(String description){
+    public Task(String description, int categoryId){
         this.description = description;
         this.completed = false;
         this.createdAt = LocalDateTime.now();
@@ -59,5 +58,9 @@ public class Task {
         result = 31 * result + (createdAt != null ? createdAt.hashCode() : 0);
         result = 31 * result + id;
         return result;
+    }
+
+    public int getCategoryId() {
+        return id;
     }
 }

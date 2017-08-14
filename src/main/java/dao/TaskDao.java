@@ -9,18 +9,16 @@ import java.util.List;
  */
 public interface TaskDao {
 
-//    create
+    //create
     void add (Task task);
-//    read
-
+    //read
     List<Task> getAll();
 
-    Task findById(int d);
-//     update
-
-//    void update(int id, String content);
-//    delete
-//    void deleteTask();
-//      void clarAllTasks();
+    Task findById(int id);
+    //update
+    void update(int id, String content, int categoryId);
+    //delete
+    void deleteById(int id);
+    void clearAllTasks();
 
 }

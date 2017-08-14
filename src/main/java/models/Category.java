@@ -5,6 +5,15 @@ package models;
  */
 public class Category {
     private String name;
+
+    public Category(String name) {
+        this.name = name;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     private int id;
 
     public String getName() {
