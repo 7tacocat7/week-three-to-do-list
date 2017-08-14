@@ -7,7 +7,7 @@ public class Task {
     private String description;
     private boolean completed;
     private LocalDateTime createdAt;
-
+    private int id;
 
     public Task(String description){
         this.description = description;
@@ -49,8 +49,7 @@ public class Task {
 
         if (completed != task.completed) return false;
         if (id != task.id) return false;
-        if (!description.equals(task.description)) return false;
-        return createdAt != null ? createdAt.equals(task.createdAt) : task.createdAt == null;
+        return description != null ? description.equals(task.description) : task.description == null;
     }
 
     @Override
